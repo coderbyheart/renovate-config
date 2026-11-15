@@ -23,7 +23,7 @@
       "matchDepTypes": ["peerDependencies"]
     },
     {
-      "matchUpdateTypes": ["minor", "pin", "digest"],
+      "matchUpdateTypes": ["minor", "pin", "pinDigest", "digest"],
       "automerge": true,
       "matchDepTypes": [
         "dependencies",
@@ -49,7 +49,7 @@
     },
     {
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest", "digest"],
       "automerge": true
     }
   ]
