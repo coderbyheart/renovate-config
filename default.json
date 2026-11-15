@@ -1,0 +1,56 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "helpers:pinGitHubActionDigestsToSemver"],
+  "ignorePresets": [":prHourlyLimit2", ":prConcurrentLimit20"],
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "3 days",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "automergeType": "pr"
+  },
+  "packageRules": [
+    {
+      "rangeStrategy": "bump",
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies",
+        "optionalDependencies"
+      ]
+    },
+    {
+      "rangeStrategy": "widen",
+      "matchDepTypes": ["peerDependencies"]
+    },
+    {
+      "matchUpdateTypes": ["minor", "pin", "digest"],
+      "automerge": true,
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies",
+        "optionalDependencies",
+        "peerDependencies"
+      ]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies",
+        "optionalDependencies",
+        "peerDependencies"
+      ]
+    },
+    {
+      "matchPackagePatterns": ["@coderbyheart/*"],
+      "minimumReleaseAge": null
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
+}

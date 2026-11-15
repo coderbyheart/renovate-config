@@ -1,0 +1,47 @@
+{
+  "name": "@coderbyheart/renovate-config",
+  "version": "0.0.0-development",
+  "description": "Renovate config for my projects",
+  "license": "MIT",
+  "author": "Markus Tacker | https://coderbyheart.com",
+  "repository": "git@github.com:coderbyheart/renovate-config.git",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "21.2.4",
+    "check-node-version": "4.2.1",
+    "commitlint": "21.2.4",
+    "husky": "9.1.7",
+    "lint-staged": "17.6.0",
+    "oxfmt": "0.78.0",
+    "renovate": "44.239.1"
+  },
+  "lint-staged": {
+    "*.{yml,md,js,json}": [
+      "oxfmt"
+    ]
+  },
+  "release": {
+    "branches": [
+      "saga"
+    ],
+    "remoteTags": true,
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "successCommentCondition": false,
+          "failCommentCondition": false
+        }
+      ]
+    ]
+  },
+  "engines": {
+    "node": ">=26.13.1 <27",
+    "npm": ">=12.2.2 <13"
+  }
+}
