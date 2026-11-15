@@ -53,6 +53,11 @@
       "matchPackageNames": ["actions/**"],
       "matchUpdateTypes": ["major"],
       "automerge": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchDatasources": ["github-runners"],
+      "automerge": true
     }
   ]
 }
