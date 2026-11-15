@@ -12,11 +12,7 @@
   "packageRules": [
     {
       "rangeStrategy": "bump",
-      "matchDepTypes": [
-        "dependencies",
-        "devDependencies",
-        "optionalDependencies"
-      ]
+      "matchDepTypes": ["dependencies", "devDependencies", "optionalDependencies"]
     },
     {
       "rangeStrategy": "widen",
@@ -50,6 +46,17 @@
     {
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest", "digest"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["actions/**"],
+      "matchUpdateTypes": ["major"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchDatasources": ["github-runners"],
       "automerge": true
     }
   ]
