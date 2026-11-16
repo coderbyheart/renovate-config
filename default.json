@@ -76,6 +76,10 @@
       "matchPackageNames": ["aws-cdk", "aws-cdk-lib", "cdk", "constructs"]
     },
     {
+      "groupName": "react",
+      "matchPackageNames": ["react", "react-dom"]
+    },
+    {
       "description": "Automerge major updates of AWS SDK, which usually releases major updates only.",
       "matchPackageNames": ["@aws-sdk/*", "aws-cdk", "aws-cdk-lib", "cdk", "constructs"],
       "matchUpdateTypes": ["major"],
