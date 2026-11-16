@@ -68,6 +68,12 @@
       "matchPackageNames": ["oxlint", "oxfmt"],
       "matchUpdateTypes": ["major"],
       "automerge": true
+    },
+    {
+      "description": "Automerge major updates of Sentry, which usually releases major updates only.",
+      "matchPackageNames": ["@sentry/*"],
+      "matchUpdateTypes": ["major"],
+      "automerge": true
     }
   ]
 }
