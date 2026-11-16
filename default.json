@@ -44,7 +44,7 @@
       ]
     },
     {
-      "matchPackagePatterns": ["@coderbyheart/*"],
+      "matchPackageNames": ["@coderbyheart/*"],
       "minimumReleaseAge": null
     },
     {
