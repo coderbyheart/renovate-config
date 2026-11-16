@@ -70,6 +70,16 @@
       "matchPackageNames": ["@sentry/*"],
       "matchUpdateTypes": ["major"],
       "automerge": true
+    },
+    {
+      "groupName": "AWS CDK",
+      "matchPackageNames": ["aws-cdk", "aws-cdk-lib", "cdk", "constructs"]
+    },
+    {
+      "description": "Automerge major updates of AWS SDK, which usually releases major updates only.",
+      "matchPackageNames": ["@aws-sdk/*", "aws-cdk", "aws-cdk-lib", "cdk", "constructs"],
+      "matchUpdateTypes": ["major"],
+      "automerge": true
     }
   ]
 }
