@@ -4,6 +4,7 @@
   "ignorePresets": [":prHourlyLimit2", ":prConcurrentLimit20"],
   "labels": ["dependencies"],
   "minimumReleaseAge": "3 days",
+  "minimumReleaseAgePackageManagerSync": true,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
