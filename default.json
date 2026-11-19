@@ -61,12 +61,6 @@
       "automerge": true
     },
     {
-      "description": "Automerge major updates of oxlint and oxfmt; oxfmt is 0.x, so Renovate treats every release as major",
-      "matchPackageNames": ["oxlint", "oxfmt"],
-      "matchUpdateTypes": ["major"],
-      "automerge": true
-    },
-    {
       "description": "Automerge major updates of Sentry, which usually releases major updates only.",
       "matchPackageNames": ["@sentry/*"],
       "matchUpdateTypes": ["major"],
